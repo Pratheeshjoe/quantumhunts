@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Resizing and Centered Icon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxK75QmV/F1+qQ2h956rViaQjj4niqeoq4YMs2Q7DJO1r7h" rel="stylesheet" crossorigin="anonymous">
+  <style>
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 20px; /* Add margin between images */
+    }
+
+    .image-container img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-image: url('icon.png');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="pexels-cesar-perez-733745.jpg" alt="Image 1">
+          <div class="icon"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="pexels-gabriel-hohol-3593922.jpg" alt="Image 2">
+          <div class="icon"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="pexels-yurii-hlei-1545743.jpg" alt="Image 3">
+          <div class="icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-lina-kivaka-1841120.jpg" alt="Image 4">
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-viktor-lundberg-754595.jpg" alt="Image 5">
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-vlad-alexandru-popa-1402787.jpg" alt="Image 6">
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-sebastian-pichard-6894427.jpg" alt="Image 7">
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-jay-pizzle-3752194.jpg" alt="Image 8">
+            <div class="icon"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-gabriel-hohol-3593922.jpg" alt="Image 9">
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="pexels-lina-kivaka-1841120.jpg" alt="Image 10">
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add additional rows as needed -->
+  </div>
+</body>
+</html>
