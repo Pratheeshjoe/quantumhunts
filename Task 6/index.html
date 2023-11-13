@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #3494e6, #ec6ead);
+    }
+
+    #mergedVideo {
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+  <title>Merged Video</title>
+</head>
+<body>
+
+<video id="mergedVideo" class="video-js vjs-default-skin" controls width="640" height="360">
+  <source src="c67cfc17-db0e-4f28-b195-ba51984165b6.mp4" type="video/mp4">
+  <source src="be928c0a-8b8b-4526-8fcf-3a3e92af66bd (1).mp4" type="video/mp4">
+</video>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var player = videojs('mergedVideo');
+    var videoSources = [
+      { src: 'be928c0a-8b8b-4526-8fcf-3a3e92af66bd (1).mp4', type: 'video/mp4' },
+      { src: 'c67cfc17-db0e-4f28-b195-ba51984165b6.mp4', type: 'video/mp4' }
+    ];
+
+    player.on('ended', function () {
+      // Move to the next source in the array
+      var currentIndex = player.currentSource().src === videoSources[0].src ? 0 : 1;
+      var nextIndex = (currentIndex + 1) % videoSources.length;
+
+      // Set the next video source and play
+      player.src(videoSources[nextIndex]);
+      player.play();
+    });
+
+    // Start playing the first video
+    player.play();
+  });
+</script>
+
+</body>
+</html>

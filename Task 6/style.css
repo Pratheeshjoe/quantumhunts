@@ -1,0 +1,40 @@
+#video-container {
+    width: 640px;
+    height: 360px;
+  }
+  
+  #video-player {
+    width: 100%;
+    height: 100%;
+  }
+  
+  script.js:
+  const videoContainer = document.getElementById('video-container');
+  
+  const videoPlayer = videojs(videoContainer, {
+    controls: true,
+    autoplay: true,
+    preload: 'auto'
+  });
+  
+  const video1Source = {
+    src: 'video (2160p).mp4',
+    type: 'video/mp4'
+  };
+  
+  const video2Source = {
+    src: 'pexels-artem-podrez-5752550 (2160p).mp4',
+    type: 'video/mp4'
+  };
+  
+  videoPlayer.play(video1Source);
+  
+  videoPlayer.on('ended', () => {
+    videoPlayer.play(video2Source);
+  });
+  
+  videoPlayer.on('play', () => {
+    if (videoPlayer.currentSource().src === video2Source.src) {
+      videoPlayer.currentTime(0);
+  }
+  });
