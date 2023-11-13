@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audi</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-pzjw8+ua/C5NqX2l+h0wo/c5t9gq0UfIoPLD9P99NpDw6DOcAnIn6yqtq5gA2hbp" crossorigin="anonymous">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+      background-color: white;
+    }
+
+    .jumbotron {
+      background-image: url("pexels-sebastian-pichard-6894427.jpg"); 
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .feature-section {
+      padding: 80px 0;
+    }
+
+    .feature-item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .gallery-item {
+      margin-bottom: 30px;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .contact-section {
+      background-color: #343a40;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">Audi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+      <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home" class="jumbotron">
+  <h1 class="display-4">Audi - The Art of Engineering</h1>
+  <p class="lead">Explore our luxury cars with cutting-edge technology and design.</p>
+</div>
+
+<div id="features" class="feature-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="feature-item">
+          <i class="fas fa-car feature-icon"></i>
+          <h3>Luxury Cars</h3>
+          <p>Discover our range of luxurious and high-performance cars.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-item">
+          <i class="fas fa-cogs feature-icon"></i>
+          <h3>Advanced Technology</h3>
+          <p>Experience cutting-edge technology and innovation in every Audi vehicle.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-item">
+          <i class="fas fa-globe feature-icon"></i>
+          <h3>Global Presence</h3>
+          <p>With a global presence, Audi is synonymous with luxury and performance worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="gallery" class="gallery-section">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 gallery-item">
+        <img src="pexels-jay-johnson-6335848.jpg" alt="Audi Gallery 1">
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="pexels-pixabay-533562.jpg" alt="Audi Gallery 2">
+      </div>
+      <div class="col-md-4 gallery-item">
+        <img src="pexels-ryan-west-1719647.jpg" alt="Audi Gallery 3">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2023 Audi. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+      
+          window.location.hash = hash;
+        });
+      } 
+    });
+  });
+</script>
+
+</body>
+</html>
